@@ -13,7 +13,7 @@ new_train = open(new_train_path, 'w')
 train_list = []
 lines = train. readlines()
 for line in lines:
-    l = line.replace('<', '').replace('(', '').replace(')', '').replace('>', '').replace('/', '').split('\t')
+    l = line.split('\t')
     if abs(len(l[0].split()) - len(l[1].split()))< 15:
         train_list.append(line)
 
@@ -24,7 +24,7 @@ new_test = open(new_test_path, 'w')
 test_list = []
 lines = test. readlines()
 for line in lines:
-    l = line.replace('<', '').replace('(', '').replace(')', '').replace('>', '').replace('/', '').split('\t')
+    l = line.split('\t')
     if abs(len(l[0].split()) - len(l[1].split()))< 15:
         test_list.append(line)
 
@@ -35,7 +35,7 @@ new_dev = open(new_dev_path, 'w')
 dev_list = []
 lines = dev. readlines()
 for line in lines:
-    l = line.replace('<', '').replace('(', '').replace(')', '').replace('>', '').replace('/', '').split('\t')
+    l = line.split('\t')
     if abs(len(l[0].split()) - len(l[1].split()))< 15:
         dev_list.append(line)
 
